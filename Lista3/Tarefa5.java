@@ -9,11 +9,18 @@ public class Tarefa5 {
         do {
             System.out.println("Digite um número diferente de 0");
             numero = leia.nextInt();
+           {
+                while(numero < 0) {
+                    System.out.println("Digite um número diferente de 0");
+                    numero = leia.nextInt();
+                }
+            }
             soma = numero + numeroPassado;
             numeroPassado = soma;
         }
         while (numero != 0);
-        System.out.println("A soma dos números foi: "+soma);
+        System.out.println("A soma dos números foi: "+ soma);
+        leia.close();
     }
 
 }
